@@ -16,19 +16,21 @@ from ingredients import *
 
 async def main():
     # gets the access token for the Kroger API
+    print('Getting access token... ', end='', flush=True)
     access_token = getAccessToken()
+    print('done')
+    
+    # gets the location of the nearest Kroger store, replace zip code with your own
+    print('Getting closest Kroger location... ', end='', flush=True)
     zip_code = '43062'
-
-    # gets the location of the nearest Kroger store
     location = getLocation(access_token, zip_code)
     location_id = location["locationId"]
+    print('done')
 
-    tasks = []
+    print('Getting ingredient prices... ', end='', flush=True)
     for ingredient in ingredients:
-        tasks.append(getIngredientPrice(access_token, location_id, ingredient["id"], ingredient["url"]))
-
-    await asyncio.gather(*tasks)
-
+        price = getIngredientPrice(access_token, location_id, ingredient["id"])
+        ingredient["price"] = str(price)
     print('done')
 
 if __name__ == "__main__":

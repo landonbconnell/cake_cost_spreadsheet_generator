@@ -3,7 +3,7 @@ from secrets import SECRETS
 
 # The URL for the API endpoint
 def getAccessToken():
-    url = 'https://api-ce.kroger.com/v1/connect/oauth2/token'
+    url = 'https://api.kroger.com/v1/connect/oauth2/token'
 
     response = requests.post(
         url, 

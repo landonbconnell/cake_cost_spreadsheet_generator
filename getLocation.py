@@ -1,7 +1,7 @@
 import requests
 
 def getLocation(access_token, zip_code):
-    url = 'https://api-ce.kroger.com/v1/locations'
+    url = 'https://api.kroger.com/v1/locations'
 
     headers = {
         'Accept': 'application/json',
