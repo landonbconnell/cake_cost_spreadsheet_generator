@@ -12,7 +12,8 @@ recipes = [
             {
                 "name": "butter",
                 "quantity": {
-                    "amount": 1
+                    "amount": 4,
+                    "unit": "oz"
                 }
             }
             {
@@ -38,8 +39,8 @@ recipes = [
             {
                 "name": "salt",
                 "quantity": {
-                    "amount": 0.5,
-                    "unit": "tsp"
+                    "amount": 0.5 / 6,
+                    "unit": "oz"
                 }
             },
             {
@@ -59,8 +60,8 @@ recipes = [
             {
                 "name": "vanilla extract",
                 "quantity": {
-                    "amount": 1,
-                    "unit": "tbsp"
+                    "amount": 0.5,
+                    "unit": "oz"
                 }
             },
             {
@@ -79,29 +80,29 @@ recipes = [
             {
                 "name": "baking powder",
                 "quantity": {
-                    "amount": 2,
-                    "unit": "tsp"
+                    "amount": 2 / 6,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "baking soda",
                 "quantity": {
-                    "amount": 1.5,
-                    "unit": "tsp"
+                    "amount": 1.5 / 6,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "buttermilk",
                 "quantity": {
-                    "amount": 1.5,
-                    "unit": "cups"
+                    "amount": 12,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "cocoa powder",
                 "quantity": {
-                    "amount": 2.125,
-                    "unit": "cups"
+                    "amount": 2.125 * 3.5,
+                    "unit": "oz"
                 }
             },
             {
@@ -120,36 +121,36 @@ recipes = [
             {
                 "name": "flour",
                 "quantity": {
-                    "amount": 3,
-                    "unit": "cups"
+                    "amount": 13.5,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "salt",
                 "quantity": {
-                    "amount": 1.5,
-                    "unit": "tsp"
+                    "amount": 1.5 / 6,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "sugar",
                 "quantity": {
-                    "amount": 3,
-                    "unit": "cups"
+                    "amount": 21,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "vanilla extract",
                 "quantity": {
-                    "amount": 1,
-                    "unit": "tbsp"
+                    "amount": 0.5,
+                    "unit": "oz"
                 }
             },
             {
                 "name": "vegetable oil",
                 "quantity": {
-                    "amount": 0.75,
-                    "unit": "cups"
+                    "amount": 5.75,
+                    "unit": "oz"
                 }
             }
         ]
@@ -161,8 +162,8 @@ recipes = [
             {
                 "name": "almond extract",
                 "quantity": {
-                    "amount": 1,
-                    "unit": "tsp"
+                    "amount": 1 / 6,
+                    "unit": "oz"
                 }
             },
             {
@@ -174,7 +175,8 @@ recipes = [
             {
                 "name": "butter",
                 "quantity": {
-                    "amount": 1
+                    "amount": 4,
+                    "unit": "oz"
                 }
             },
             {
@@ -200,8 +202,8 @@ recipes = [
             {
                 "name": "salt",
                 "quantity": {
-                    "amount": 0.25,
-                    "unit": "tsp"
+                    "amount": 0.25 / 6,
+                    "unit": "oz"
                 }
             }
             {
@@ -221,8 +223,8 @@ recipes = [
             {
                 "name": "vanilla extract",
                 "quantity": {
-                    "amount": 1,
-                    "unit": "tsp"
+                    "amount": 1 / 6,
+                    "unit": "oz"
                 }
             },
         ]

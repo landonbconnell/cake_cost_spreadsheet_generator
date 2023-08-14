@@ -1,7 +1,7 @@
 import requests
 from secrets import SECRETS
 
-# The URL for the API endpoint
+# returns the access token for the Kroger API
 def getAccessToken():
     url = 'https://api.kroger.com/v1/connect/oauth2/token'
 

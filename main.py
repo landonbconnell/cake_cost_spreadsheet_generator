@@ -2,19 +2,15 @@
 # This script will generate a spreadsheet of cake costs based on the current cost of ingredients and the recipe for each cake.
 # This task will be accomplished via the Kroger API and OpenPyXL.
 
-import asyncio
 from openpyxl import Workbook
 from getAccessToken import *
 from getLocation import *
 from getIngredientDetails import *
 from ingredients import *
+from displayIngredientData import *
 
-# wb = Workbook()
-# ws = wb.active
+def main():
 
-# ws.title = "Current Ingredient Costs"
-
-async def main():
     # gets the access token for the Kroger API
     print('Getting access token... ', end='', flush=True)
     access_token = getAccessToken()
@@ -27,11 +23,20 @@ async def main():
     location_id = location["locationId"]
     print('done')
 
+    # gets the current price and size of each ingredient
     print('Getting ingredient prices... ', end='', flush=True)
     for ingredient in ingredients:
-        price = getIngredientDetails(access_token, location_id, ingredient["id"])
-        ingredient["price"] = str(price)
+        if ingredient["id"]:
+            data = getIngredientDetails(access_token, location_id, ingredient["id"])
+            price, size = data["price"], data["size"]
+            ingredient["price"] = price
+            ingredient["size"] = size
+    print('done')
+
+    # writes the ingredient data to the spreadsheet
+    print('Writing data to spreadsheet... ', end='', flush=True)
+    displayIngredientData(ingredients)
     print('done')
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()

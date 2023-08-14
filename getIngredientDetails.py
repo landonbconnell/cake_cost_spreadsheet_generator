@@ -1,10 +1,7 @@
 import requests
-import json
-from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
+from convertToOunces import *
 
+# returns the price and size of a specific ingredient
 def getIngredientDetails(access_token, location_id, product_id):
     url = f"https://api.kroger.com/v1/products/{product_id}?filter.locationId={location_id}"
 
@@ -15,12 +12,9 @@ def getIngredientDetails(access_token, location_id, product_id):
 
     response = requests.get(url, headers=headers)
 
-    # Check if the request was successful
     if response.status_code == 200:
         data = response.json()
         if data:
-            #print(json.dumps(data, indent=4))
-
             # get the cheapest price for the current ingredient
             product_details = data["data"]["items"][0]
 
@@ -29,14 +23,15 @@ def getIngredientDetails(access_token, location_id, product_id):
                 price = prices["promo"]
             else:
                 price = prices["regular"]
-            
+
             size = product_details["size"]
+            size = convertToOunces(size) # converts the size to ounces
 
             return {
                 "price": price,
                 "size": size
             }
-            
+
         else:
             return None
     else:
