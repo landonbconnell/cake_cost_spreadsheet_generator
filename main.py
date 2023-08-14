@@ -25,11 +25,11 @@ async def main():
 
     tasks = []
     for ingredient in ingredients:
-        tasks.append(getIngredientPrice(access_token, location_id, ingredient["id"]))
+        tasks.append(getIngredientPrice(access_token, location_id, ingredient["id"], ingredient["url"]))
 
     await asyncio.gather(*tasks)
 
-    print(ingredients)
+    print('done')
 
 if __name__ == "__main__":
     asyncio.run(main())

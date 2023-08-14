@@ -6,7 +6,7 @@ ingredients = [
         "price": ""
     },
     {
-        "name": "powdered_sugar",
+        "name": "powdered sugar",
         "id": "0001111087664",
         "url": "https://www.kroger.com/p/kroger-powdered-sugar/0001111087664",
         "price": ""
@@ -18,13 +18,13 @@ ingredients = [
         "price": ""
     },
     {
-        "name": "boxed_cake_mix",
+        "name": "boxed cake mix",
         "id": "0064420930750",
-        "url": "https://www.kroger.com/p/duncan-hines-perfectly-moist-classic-white-cake-mix/0064420930750?fulfillment=PICKUP&searchType=default_search",
+        "url": "https://www.kroger.com/p/duncan-hines-perfectly-moist-classic-white-cake-mix/0064420930750",
         "price": ""
     },
     {
-        "name": "cocoa_powder",
+        "name": "cocoa powder",
         "id": "0003400005300",
         "url": "https://www.kroger.com/p/hershey-s-special-dark-dutched-cocoa-powder-can/0003400005300",
         "price": ""
@@ -42,7 +42,7 @@ ingredients = [
         "price": ""
     },
     {
-        "name": "sour_cream",
+        "name": "sour cream",
         "id": "0001111046080",
         "url": "https://www.kroger.com/p/kroger-original-sour-cream/0001111046080",
         "price": ""
@@ -54,13 +54,13 @@ ingredients = [
         "price": ""
     },
     {
-        "name": "baking_soda",
+        "name": "baking soda",
         "id": "0001111085451",
         "url": "https://www.kroger.com/p/kroger-pure-baking-soda/0001111085451",
         "price": ""
     },
     {
-        "name": "baking_powder",
+        "name": "baking powder",
         "id": "0001111090765",
         "url": "https://www.kroger.com/p/kroger-baking-powder/0001111090765",
         "price": ""
