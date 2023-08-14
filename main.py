@@ -6,7 +6,7 @@ import asyncio
 from openpyxl import Workbook
 from getAccessToken import *
 from getLocation import *
-from getIngredientPrice import *
+from getIngredientDetails import *
 from ingredients import *
 
 # wb = Workbook()
@@ -29,7 +29,7 @@ async def main():
 
     print('Getting ingredient prices... ', end='', flush=True)
     for ingredient in ingredients:
-        price = getIngredientPrice(access_token, location_id, ingredient["id"])
+        price = getIngredientDetails(access_token, location_id, ingredient["id"])
         ingredient["price"] = str(price)
     print('done')
 
