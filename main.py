@@ -11,6 +11,7 @@ from initializeWorkbook import *
 from displayIngredientData import *
 from displayRecipes import *
 from recipes import *
+from displayCakeCosts import *
 
 def main():
 
@@ -49,6 +50,11 @@ def main():
     # writes the recipes to a spreadsheet
     print('Writing recipes to a spreadsheet... ', end='', flush=True)
     displayRecipes(wb, ingredients, recipes)
+    print('done')
+
+    # writes the cake costs to a spreadsheet
+    print('Writing cake costs to a spreadsheet... ', end='', flush=True)
+    displayCakeCosts(wb, recipes)
     print('done')
 
     wb.save("cake_costs.xlsx")
