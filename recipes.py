@@ -1,7 +1,7 @@
 recipes = [
     {
         "name": "vanilla cake",
-        "size": "8"
+        "size": "8",
         "ingredients": [
             {
                 "name": "boxed cake mix",
@@ -15,7 +15,7 @@ recipes = [
                     "amount": 4,
                     "unit": "oz"
                 }
-            }
+            },
             {
                 "name": "eggs",
                 "quantity": {
@@ -75,7 +75,7 @@ recipes = [
     },
     {
         "name": "chocolate cake",
-        "size": "8"
+        "size": "8",
         "ingredients": [
             {
                 "name": "baking powder",
@@ -205,7 +205,7 @@ recipes = [
                     "amount": 0.25 / 6,
                     "unit": "oz"
                 }
-            }
+            },
             {
                 "name": "sugar",
                 "quantity": {

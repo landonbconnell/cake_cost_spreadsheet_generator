@@ -7,7 +7,10 @@ from getAccessToken import *
 from getLocation import *
 from getIngredientDetails import *
 from ingredients import *
+from initializeWorkbook import *
 from displayIngredientData import *
+from displayRecipes import *
+from recipes import *
 
 def main():
 
@@ -33,10 +36,22 @@ def main():
             ingredient["size"] = size
     print('done')
 
-    # writes the ingredient data to the spreadsheet
-    print('Writing data to spreadsheet... ', end='', flush=True)
-    displayIngredientData(ingredients)
+    # initializes the workbook
+    print('Initializing Workbook... ', end='', flush=True)
+    wb = initializeWorkbook()
     print('done')
+
+    # writes the ingredient data to a spreadsheet
+    print('Writing ingredient data to a spreadsheet... ', end='', flush=True)
+    displayIngredientData(wb, ingredients)
+    print('done')
+
+    # writes the recipes to a spreadsheet
+    print('Writing recipes to a spreadsheet... ', end='', flush=True)
+    displayRecipes(wb, ingredients, recipes)
+    print('done')
+
+    wb.save("cake_costs.xlsx")
 
 if __name__ == "__main__":
     main()
